@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <Button
+        android:id="@+id/BtnNotifications"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/what_are_my_notifications"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BtnTime" />
+
+    <Button
+        android:id="@+id/BtnTime"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="236dp"
+        android:text="@string/what_is_the_time"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/BtnDailyBrief"/>
+
+    <Button
+        android:id="@+id/BtnDailyBrief"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginBottom="440dp"
+        android:text="@string/daily_brief"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/BtnWeatherReport"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginBottom="440dp"
+        android:text="@string/weather_report"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/BtnDailyBrief"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_first6"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="sans-serif"
+        android:text="function"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BtnDate" />
+
+    <Button
+        android:id="@+id/BtnDate"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="236dp"
+        android:text="@string/what_is_the_date"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BtnWeatherReport" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
