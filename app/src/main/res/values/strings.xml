@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">EchoAssistant</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
@@ -10,28 +10,36 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
+    <!-- Settings -->
+    <string name="Modes">Application Modes</string>
+    <string name="Themes">Themes</string>
+    <string name="Font">Font and Font Size</string>
+
+    <!-- Modes -->
+    <string name="Aloud">Speak Commands Aloud</string>
+    <string name="silentComs">Communicate Silently With Alexa</string>
+
+    <!-- Themes -->
+    <string name="DarkMode">Dark Mode</string>
+    <string name="HighCon">High Contrast Mode</string>
+
+
     <!-- Strings for display text on buttons -->
+    <string name="alexaComs">Alexa Commands</string>
+    <string name="smartHome">Smart Home Commands</string>
+    <string name="extraCommand">Extra Commands</string>
+
+
     <string name="daily_brief">Daily Brief</string>
     <string name="what_are_my_notifications">What are my Notifications?</string>
     <string name="what_is_the_time">What is the time?</string>
     <string name="weather_report">Weather Report</string>
     <string name="what_is_the_date">What is the date?</string>
-    <string name="title_activity_settings">SettingsActivity</string>
 
-    <!-- Preference Titles -->
-    <string name="messages_header">Messages</string>
-    <string name="sync_header">Sync</string>
 
-    <!-- Messages Preferences -->
-    <string name="signature_title">Your signature</string>
-    <string name="reply_title">Default reply action</string>
-
-    <!-- Sync Preferences -->
-    <string name="sync_title">Sync email periodically</string>
-    <string name="attachment_title">Download incoming attachments</string>
-    <string name="attachment_summary_on">Automatically download attachments for incoming emails
-    </string>
-    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="title_activity_settings">Settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

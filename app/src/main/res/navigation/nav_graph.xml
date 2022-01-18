@@ -10,29 +10,54 @@
         android:name="com.example.echoassistant.FirstFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
-
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_FirstFragment_to_smartHome"
+            app:destination="@id/smartHome" />
+        <action
+            android:id="@+id/action_FirstFragment_to_smartHome2"
+            app:destination="@id/smartHome" />
+        <action
+            android:id="@+id/action_FirstFragment_to_settingsActivity"
+            app:destination="@id/settingsActivity" />
+        <action
+            android:id="@+id/action_FirstFragment_to_alexaCommands"
+            app:destination="@id/alexaCommands" />
+        <action
+            android:id="@+id/action_FirstFragment_to_extraCommands"
+            app:destination="@id/extraCommands" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.echoassistant.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
+        android:id="@+id/smartHome"
+        android:name="com.example.echoassistant.SmartHome"
+        android:label="@string/smartHome"
+        tools:layout="@layout/fragment_smart_home" >
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            android:id="@+id/action_smartHome_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
     <activity
-        android:id="@+id/settings"
-        android:name="com.example.echoassistant.Settings"
-        android:label="activity_settings"
+        android:id="@+id/settingsActivity"
+        android:name="com.example.echoassistant.SettingsActivity"
+        android:label="@string/action_settings"
         tools:layout="@layout/activity_settings" />
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.example.echoassistant.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/alexaCommands"
+        android:name="com.example.echoassistant.AlexaCommands"
+        android:label="@string/alexaComs"
+        tools:layout="@layout/fragment_alexa_commands" >
+        <action
+            android:id="@+id/action_alexaCommands_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/extraCommands"
+        android:name="com.example.echoassistant.extraCommands"
+        android:label="@string/extraCommand"
+        tools:layout="@layout/fragment_extra_commands" >
+        <action
+            android:id="@+id/action_extraCommands_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+
 </navigation>

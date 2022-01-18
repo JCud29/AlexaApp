@@ -33,7 +33,7 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.BtnDailyBrief.setOnClickListener { view ->
+        /*binding.BtnDailyBrief.setOnClickListener { view ->
             Snackbar.make(view, "Alexa, what's on my schedule today?", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
 
@@ -55,7 +55,25 @@ class FirstFragment : Fragment() {
         binding.BtnNotifications.setOnClickListener { view ->
             Snackbar.make(view, "Alexa, what are my notifications?", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
+        }*/
+
+        binding.btnAlexaComs.setOnClickListener { view ->
+            findNavController().navigate(R.id.action_FirstFragment_to_alexaCommands)
         }
+
+        binding.btnSmartHome.setOnClickListener { view ->
+            findNavController().navigate(R.id.action_FirstFragment_to_smartHome)
+        }
+
+        binding.btnExtraComs.setOnClickListener { view ->
+            findNavController().navigate(R.id.action_FirstFragment_to_extraCommands)
+        }
+
+        binding.btnSettings.setOnClickListener { view ->
+            findNavController().navigate(R.id.action_FirstFragment_to_settingsActivity)
+        }
+
+
 
 
 
