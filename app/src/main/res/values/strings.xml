@@ -40,6 +40,20 @@
     <string name="title_activity_settings">Settings</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="what_is_the_news">What is the news?</string>
+    <string name="back">Back</string>
+    <string name="lightsOn">Turn Lights on</string>
+    <string name="turn_lights_off">Turn lights off</string>
+    <string name="increase_temperature">Increase Temperature</string>
+    <string name="what_is_the_temperature">What is the temperature?</string>
+    <string name="decrease_temperature">Decrease Temperature</string>
+    <string name="set_lights_to_50">Set lights to 50%</string>
+    <string name="play_music">Play music</string>
+    <string name="pause">Pause</string>
+    <string name="set_a_5_minute_timer">Set a 5 minute Timer</string>
+    <string name="how_long_left_on_my_timer">How long left on my timer?</string>
+    <string name="cancel_timer">Cancel Timer</string>
+    <string name="what_is_on_my_shopping_list">What is on my shopping list?</string>
 
 
 </resources>

@@ -9,10 +9,10 @@ import androidx.navigation.fragment.findNavController
 import com.example.echoassistant.databinding.FragmentSmartHomeBinding
 import com.google.android.material.snackbar.Snackbar
 
-// TODO: Rename parameter arguments, choose names that match
+/*// TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+private const val ARG_PARAM2 = "param2"*/
 
 /**
  * A simple [Fragment] subclass.
@@ -53,10 +53,40 @@ class SmartHome : Fragment() {
             findNavController().navigate(R.id.action_smartHome_to_FirstFragment)
         }
 
+        binding.btnLightsOn.setOnClickListener{view ->
+            Snackbar.make(view, "Alexa, turn on the lights", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show()
+        }
+
+        binding.btnLightsOff.setOnClickListener{view ->
+            Snackbar.make(view, "Alexa, turn off the lights", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show()
+        }
+
+        binding.btnTempUp.setOnClickListener{view ->
+            Snackbar.make(view, "Alexa, increase the temperature", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show()
+        }
+
+        binding.btnTempDown.setOnClickListener{view ->
+            Snackbar.make(view, "Alexa, decrease the temperature", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show()
+        }
+
+        binding.btnWhatTemp.setOnClickListener{view ->
+            Snackbar.make(view, "Alexa, what is the temperature?", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show()
+        }
+
+        binding.btnLightsDim.setOnClickListener{view ->
+            Snackbar.make(view, "Alexa, set the lights to 50 percent", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show()
+        }
+
 
     }
 
-    companion object {
+    /*companion object {
         /**
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.
@@ -74,5 +104,5 @@ class SmartHome : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
-    }
+    }*/
 }
