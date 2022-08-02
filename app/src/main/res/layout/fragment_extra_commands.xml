@@ -25,6 +25,7 @@
         android:layout_height="180dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="184dp"
+        android:foreground="@mipmap/icon5min"
         android:text="@string/set_a_5_minute_timer"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/btnPlay" />

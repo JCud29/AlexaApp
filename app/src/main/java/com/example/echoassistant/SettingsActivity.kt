@@ -3,6 +3,7 @@ package com.example.echoassistant
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.view.MenuItem
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 
@@ -18,32 +19,16 @@ class SettingsActivity : AppCompatActivity(), PreferenceFragmentCompat.OnPrefere
             title = savedInstanceState.getCharSequence(Title)
         }
 
-        /*supportFragmentManager.addOnBackStackChangedListener {
-            if (supportFragmentManager.backStackEntryCount==0)
-            {
-                setTitle(R.string.title_activity_settings)
-            }
-        }*/
-
         setupToolbar()
     }
 
-    /*override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle){
-        super.onSaveInstanceState(outState, outPersistentState)
-        outState.putCharSequence(Title, title)
-    }
 
-    override fun onSupportNavigateUp(): Boolean {
-        if(supportFragmentManager.popBackStackImmediate()){
-            return true
-        }
-        return super.onSupportNavigateUp()
-    }*/
-
+    //sets the tool bar settings
     private fun setupToolbar() {
         supportActionBar?.setTitle(R.string.title_activity_settings)
     }
 
+    //load the root preference which contains the options
     class MainSettings: PreferenceFragmentCompat(){
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             setPreferencesFromResource(R.xml.root_preferences, rootKey)
@@ -51,6 +36,8 @@ class SettingsActivity : AppCompatActivity(), PreferenceFragmentCompat.OnPrefere
 
     }
 
+    //creates a fragment for the activity
+    //(Dev Planet, 2019)
     override fun onPreferenceStartFragment(
         caller: PreferenceFragmentCompat?,
         pref: Preference?
@@ -73,3 +60,7 @@ class SettingsActivity : AppCompatActivity(), PreferenceFragmentCompat.OnPrefere
         private val Title = SettingsActivity::getTitle.toString()
     }
 }
+
+//References
+//Dev Planet (Producer), & Dev Planet (Director). (2019, 25 Dec). Android Preferences Settings Screen | Android Jetpack Preferences. [Video/DVD] YouTube.
+// https://www.youtube.com/watch?v=-F29CMk48RA&ab_channel=DevPlanet

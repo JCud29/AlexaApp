@@ -2,74 +2,83 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout3"
+    android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AlexaCommands">
+    tools:context=".extraCommands">
+
+    <!-- TODO: Update blank fragment layout -->
 
     <Button
-        android:id="@+id/btnWeather"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/weather_report"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnDailyBreif"
+        android:id="@+id/btnPlay"
         android:layout_width="180dp"
         android:layout_height="180dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="64dp"
-        android:text="@string/daily_brief"
-        app:iconTint="#FFFFFF"
+        android:foreground="@drawable/ic_baseline_play_arrow_24"
+        android:text="@string/play_music"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnDate"
+        android:id="@+id/btnTimer"
         android:layout_width="180dp"
         android:layout_height="180dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="184dp"
-        android:text="@string/what_is_the_date"
+        android:foreground="@mipmap/icon5min"
+        android:text="@string/set_a_5_minute_timer"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/btnDailyBreif" />
+        app:layout_constraintTop_toTopOf="@id/btnPlay" />
 
     <Button
-        android:id="@+id/btnNotifications"
+        android:id="@+id/btnTimerLeft"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="184dp"
+        android:layout_marginEnd="8dp"
+        android:foreground="@mipmap/icontimerleft"
+        android:text="@string/how_long_left_on_my_timer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnPause" />
+
+    <Button
+        android:id="@+id/btnTimerCancel"
         android:layout_width="180dp"
         android:layout_height="180dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="184dp"
-        android:text="@string/what_are_my_notifications"
+        android:foreground="@mipmap/icontimercancel"
+        android:shadowRadius="10"
+        android:text="@string/cancel_timer"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/btnDate" />
+        app:layout_constraintTop_toTopOf="@id/btnTimer"
+        tools:ignore="TextContrastCheck" />
 
     <Button
-        android:id="@+id/btnNews"
+        android:id="@+id/btnShopping"
         android:layout_width="180dp"
         android:layout_height="180dp"
         android:layout_marginTop="184dp"
         android:layout_marginEnd="8dp"
-        android:text="@string/what_is_the_news"
+        android:text="@string/what_is_on_my_shopping_list"
+        app:icon="@drawable/ic_baseline_add_shopping_cart_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/btnTime" />
+        app:layout_constraintTop_toTopOf="@id/btnTimer" />
 
     <Button
-        android:id="@+id/btnTime"
+        android:id="@+id/btnPause"
         android:layout_width="180dp"
         android:layout_height="180dp"
-        android:layout_marginTop="184dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="8dp"
-        android:text="@string/what_is_the_time"
+        android:foreground="@drawable/ic_baseline_pause_24"
+        android:text="@string/pause"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/btnWeather" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnBack"
+        android:id="@+id/btnExtraToHome"
         android:layout_width="372dp"
         android:layout_height="80dp"
         android:layout_marginStart="10dp"
@@ -77,7 +86,7 @@
         android:layout_marginEnd="10dp"
         android:text="@string/back"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnNotifications" />
+        app:layout_constraintTop_toBottomOf="@+id/btnTimerCancel" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

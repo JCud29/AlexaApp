@@ -1,23 +1,14 @@
 package com.example.echoassistant
 
 import android.os.Bundle
-import android.speech.tts.TextToSpeech
-import android.speech.tts.TextToSpeech.OnInitListener
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.echoassistant.databinding.FragmentAlexaCommandsBinding
-import com.example.echoassistant.databinding.FragmentSmartHomeBinding
 import com.google.android.material.snackbar.Snackbar
 import java.util.*
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-//private const val ARG_PARAM1 = "param1"
-//private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
@@ -29,17 +20,6 @@ class AlexaCommands : Fragment() {
 
 
     private val binding get() = _binding!!
-    /*// TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }*/
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -53,62 +33,95 @@ class AlexaCommands : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //stores an instance of the main activity
+        val mainActivity = activity as MainActivity;
 
+        //back button to return to the first fragment
         binding.btnBack.setOnClickListener {
             findNavController().navigate(R.id.action_alexaCommands_to_FirstFragment)
         }
 
+        //listener for the daily brief button to display snack bar and calls the main activitys speak command
         binding.btnDailyBreif.setOnClickListener {
-            val yourActivity = activity as MainActivity
-            yourActivity.speak()
-            Snackbar.make(view, "Alexa, what's on my schedule today?", Snackbar.LENGTH_LONG)
+            mainActivity.speak("Alexa, what is on my schedule today?")
+            Snackbar.make(view, "Alexa, what is on my schedule today?", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
 
-        binding.btnDate.setOnClickListener { view ->
-            Snackbar.make(view, "Alexa, what's the date?", Snackbar.LENGTH_LONG)
+        //onClickListener function to speak the date command using the main activity function
+        binding.btnDate.setOnClickListener {
+            mainActivity.speak("Alexa, what is the date?")
+            Snackbar.make(view, "Alexa, what is the date?", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
-        binding.btnTime.setOnClickListener { view ->
-            Snackbar.make(view, "Alexa, what's the time?", Snackbar.LENGTH_LONG)
+        //onClickListener to speak the command on the button being pressed
+        binding.btnTime.setOnClickListener {
+            mainActivity.speak("Alexa, what is the time?")
+            Snackbar.make(view, "Alexa, what is the time?", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
-        binding.btnWeather.setOnClickListener { view ->
-            Snackbar.make(view, "Alexa, what's the weather like?", Snackbar.LENGTH_LONG)
+        //listener for the weather button being pressed
+        binding.btnWeather.setOnClickListener {
+            mainActivity.speak("Alexa, what is the weather like?")
+            Snackbar.make(view, "Alexa, what is the weather like?", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
-        binding.btnNotifications.setOnClickListener { view ->
+        //onClickListener to speak the relevant command on the button being pressed
+        binding.btnNotifications.setOnClickListener {
+            mainActivity.speak("Alexa, what are my notifications?")
             Snackbar.make(view, "Alexa, what are my notifications?", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
-        binding.btnNews.setOnClickListener { view ->
+        //speaks the news command on the new button being pressed
+        binding.btnNews.setOnClickListener {
+            mainActivity.speak("Alexa, what is the news?")
             Snackbar.make(view, "Alexa, what is the news?", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
 
+    }
 
+    //sets all the buttons font size
+    private fun setBtnTextSize(textSize: Float){
+        binding.btnDailyBreif.textSize = textSize;
+        binding.btnWeather.textSize = textSize;
+        binding.btnTime.textSize = textSize;
+        binding.btnDate.textSize = textSize;
+        binding.btnNotifications.textSize = textSize;
+        binding.btnNews.textSize = textSize;
+        binding.btnBack.textSize = textSize;
+    }
+
+    //sets the background colour of all of the buttons on this fragment
+    private fun setBtnColour(buttonColour: Int) {
+        binding.btnDailyBreif.setBackgroundColor(buttonColour);
+        binding.btnWeather.setBackgroundColor(buttonColour);
+        binding.btnTime.setBackgroundColor(buttonColour);
+        binding.btnDate.setBackgroundColor(buttonColour);
+        binding.btnNotifications.setBackgroundColor(buttonColour);
+        binding.btnNews.setBackgroundColor(buttonColour);
+        binding.btnBack.setBackgroundColor(buttonColour);
+    }
+
+    //sets the text colour on the buttons of this fragment
+    private fun setTextColour(textColour: Int){
+        binding.btnDailyBreif.setTextColor(textColour);
+        binding.btnWeather.setTextColor(textColour);
+        binding.btnTime.setTextColor(textColour);
+        binding.btnDate.setTextColor(textColour);
+        binding.btnNotifications.setTextColor(textColour);
+        binding.btnNews.setTextColor(textColour);
+        binding.btnBack.setTextColor(textColour);
+    }
+
+    //when this fragments is opened/re-opened the settings are refreshed
+    override fun onResume(){
+        super.onResume()
+        val mainActivity = activity as MainActivity;
+        setBtnTextSize(mainActivity.fontSize);
+        setBtnColour(mainActivity.buttonCol)
+        setTextColour(mainActivity.txtColour)
 
     }
 
-
-
-    /*companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment AlexaCommands.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            AlexaCommands().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }*/
 }

@@ -15,4 +15,68 @@
         <item>courierNew</item>
         <item>timesNewRoman</item>
     </string-array>
+
+    <string-array name="BtnCol_entries">
+        <item>Purple</item>
+        <item>Blue</item>
+        <item>Sky Blue</item>
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Green</item>
+        <item>Black</item>
+        <item>White</item>
+    </string-array>
+
+    <string-array name="BtnCol_values">
+        <item>Purple</item>
+        <item>Blue</item>
+        <item>Sky Blue</item>
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Green</item>
+        <item>Black</item>
+        <item>White</item>
+    </string-array>
+
+    <string-array name="txtCol_entries">
+        <item>Purple</item>
+        <item>Blue</item>
+        <item>Sky Blue</item>
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Green</item>
+        <item>Black</item>
+        <item>White</item>
+    </string-array>
+
+    <string-array name="txtCol_values">
+        <item>Purple</item>
+        <item>Blue</item>
+        <item>Sky Blue</item>
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Green</item>
+        <item>Black</item>
+        <item>White</item>
+    </string-array>
+
+    <string-array name="FontSize_entries">
+        <item>10pt</item>
+        <item>12pt</item>
+        <item>14pt</item>
+        <item>16pt</item>
+        <item>18pt</item>
+        <item>20pt</item>
+        <item>22pt</item>
+    </string-array>
+
+    <string-array name="FontSize_values">
+        <item>10pt</item>
+        <item>12pt</item>
+        <item>14pt</item>
+        <item>16pt</item>
+        <item>18pt</item>
+        <item>20pt</item>
+        <item>22pt</item>
+    </string-array>
 </resources>

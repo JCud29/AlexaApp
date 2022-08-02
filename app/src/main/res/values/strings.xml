@@ -14,6 +14,9 @@
     <string name="Modes">Application Modes</string>
     <string name="Themes">Themes</string>
     <string name="Font">Font and Font Size</string>
+    <string name="apply">Apply Settings</string>
+    <string name="btnApply">Apply</string>
+
 
     <!-- Modes -->
     <string name="Aloud">Speak Commands Aloud</string>
@@ -54,6 +57,7 @@
     <string name="how_long_left_on_my_timer">How long left on my timer?</string>
     <string name="cancel_timer">Cancel Timer</string>
     <string name="what_is_on_my_shopping_list">What is on my shopping list?</string>
+    <string name="ButtonApp">ButtonAppearance</string>
 
 
 </resources>

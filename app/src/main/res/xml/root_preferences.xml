@@ -28,21 +28,43 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory app:title="@string/Font">
+    <PreferenceCategory app:title="@string/ButtonApp">
 
 
-        <ListPreference
+        <!--<ListPreference
             android:defaultValue="arial"
             android:entries="@array/reply_entries"
             android:entryValues="@array/reply_entries"
             android:key="FontType"
-            android:title="Font" />
+            android:title="Font" />-->
 
-        <SeekBarPreference
+        <ListPreference
+            android:defaultValue="14pt"
+            android:entries="@array/FontSize_entries"
+            android:entryValues="@array/FontSize_values"
             android:key="FontSize"
-            android:title="Font Size"
-            />
+            android:title="Font Size" />
+
+        <ListPreference
+            android:defaultValue="Purple"
+            android:entries="@array/BtnCol_entries"
+            android:entryValues="@array/BtnCol_values"
+            android:key="BtnColor"
+            android:title="Button Colour" />
+
+        <ListPreference
+            android:defaultValue="White"
+            android:entries="@array/txtCol_entries"
+            android:entryValues="@array/txtCol_values"
+            android:key="txtColour"
+            android:title="Text Colour" />
+
     </PreferenceCategory>
+
+    <!--<Preference
+        android:key="Apply"
+        android:title="Apply Settings"
+        android:widgetLayout="@layout/pref_reset_bd_button" />-->
 
 
 
